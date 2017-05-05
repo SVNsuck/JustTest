@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
         }else{
             Toast.makeText(this,"请先完成测验!",Toast.LENGTH_SHORT).show();
-            return;
         }
     }
 
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void reTest(View view){
+        score = 100;
         LinearLayout editLayout = (LinearLayout) findViewById(R.id.edit_layout);
         LinearLayout resultLayout= (LinearLayout) findViewById(R.id.result_layout);
         //设置填报页面显示,结果页面隐藏
