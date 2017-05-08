@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Just Test</string>
+    <string name="title">农药小知识测试</string>
+    <string name="_4_25">总共4题,每题25分</string>
+    <string name="q1">农药非体验服总共有多个英雄?</string>
+    <string name="q2">下列哪些英雄属于SNK英雄?</string>
+    <string name="q3">下列哪个英雄回血能力最强?</string>
+    <string name="juzi">橘子</string>
+    <string name="chengyaojin">三板斧</string>
+    <string name="nezha">莲藕</string>
+    <string name="q4">请写出农药最贵英雄的名称</string>
+    <string name="q4_placeholder">提示,是一位女性哦~</string>
+    <string name="advice">喜欢我的这个作品吗?有什么建议尽管提出来哈(选填)</string>
+    <string name="advice_placeholder">写下您的建议,这对我很重要.</string>
+    <string name="test_done">完成测验</string>
+    <string name="score">您的分数为:</string>
+    <string name="test_again">再次测验</string>
 </resources>

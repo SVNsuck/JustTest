@@ -11,6 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import es.dmoral.toasty.Toasty;
+
 public class MainActivity extends AppCompatActivity {
 
     int score = 100;//测试的总分数,初始化100分
@@ -37,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBox3 = (CheckBox) findViewById(R.id.xiaoqiao_isBelongSNK_checkbox);
         EditText mostExpHero = (EditText) findViewById(R.id.mostExpensiveHero_editText);
         String mostExpHeroTest = mostExpHero.getText().toString();
-        EditText advise = (EditText) findViewById(R.id.advise_editText);
         //判断用户填报的选项是否正确,错误的每项扣25分.
         if (rd1CheckedId != null && rd2CheckedId != null && mostExpHeroTest != null && !"".equals(mostExpHeroTest)
                 && (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked())) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             if(rd2CheckedId!=rb2rg2.getId()){
                 score -= 25;
             }
-            if(!(checkBox1.isChecked()&&checkBox2.isChecked())){
+            if(!(checkBox1.isChecked()&&checkBox2.isChecked()&&!checkBox3.isChecked())){
                 score -= 25;
             }
             if(!"武则天".equals(mostExpHeroTest.trim())){
@@ -62,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
             scoreTextView.setText(""+score);
 
         }else{
-            Toast.makeText(this,"请先完成测验!",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"请先完成测验!",Toast.LENGTH_SHORT).show();
+            Toasty.warning(this,"请先完成测验!",Toast.LENGTH_SHORT,true).show();
         }
     }
 

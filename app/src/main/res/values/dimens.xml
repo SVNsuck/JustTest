@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="scoreTextSize">56sp</dimen>
+    <dimen name="headerLayoutHeight">32dp</dimen>
+    <dimen name="headerTextSize">15sp</dimen>
+    <dimen name="headerPaddingLeft">16dp</dimen>
+    <dimen name="titleLayoutHeight">56dp</dimen>
+    <dimen name="titleTextSize">32sp</dimen>
+</resources>

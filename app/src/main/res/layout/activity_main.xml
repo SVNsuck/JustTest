@@ -2,161 +2,160 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#CFD8DC">
-    <LinearLayout
-        android:id="@+id/edit_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:focusable="true"
-        android:focusableInTouchMode="true">
-        <TextView
-            style="@style/TitleTextStyle"
-            android:background="#FF5722"
-            android:text="农药小知识测试"
-            />
+        android:background="#CFD8DC"
+        android:orientation="vertical">
 
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:background="#FF5722"
-            android:text="总共4题,每题25分" />
+        <LinearLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="农药非体验服总共有多个英雄?" />
+            <TextView
+                style="@style/TitleTextStyle"
+                android:background="#FF5722"
+                android:text="@string/title" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:background="#FF5722"
+                android:text="@string/_4_25" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/q1" />
 
 
             <RadioGroup
-                style="@style/optionStyle"
                 android:id="@+id/rg1"
-                >
+                style="@style/optionStyle">
 
                 <RadioButton
                     android:id="@+id/rb1_rg1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radio_button"
                     android:text="47" />
 
                 <RadioButton
                     android:id="@+id/rb2_rg1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="58" />
+                    android:text="58"
+                    style="@style/radio_button" />
 
                 <RadioButton
                     android:id="@+id/rb3_rg1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/radio_button"
                     android:text="65" />
             </RadioGroup>
 
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="下列哪些英雄属于SNK英雄?" />
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/q2" />
 
-        <CheckBox
-            android:id="@+id/juzi_isBelongSNK_checkbox"
-            style="@style/optionStyle"
-            android:text="橘子" />
-
-        <CheckBox
-            android:id="@+id/huowu_isBelongSNK_checkbox"
-            style="@style/optionStyle"
-            android:text="火舞" />
-
-        <CheckBox
-            android:id="@+id/xiaoqiao_isBelongSNK_checkbox"
-            style="@style/optionStyle"
-            android:text="小乔" />
-
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="下列哪个英雄回血能力最强?" />
-
-        <RadioGroup
-            android:id="@+id/rg2"
-            style="@style/optionStyle">
-
-            <RadioButton
-                android:id="@+id/rb1_rg2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <CheckBox
+                android:id="@+id/juzi_isBelongSNK_checkbox"
+                style="@style/optionStyle"
                 android:text="橘子" />
 
-            <RadioButton
-                android:id="@+id/rb2_rg2"
+            <CheckBox
+                android:id="@+id/huowu_isBelongSNK_checkbox"
+                style="@style/optionStyle"
+                android:text="火舞" />
+
+            <CheckBox
+                android:id="@+id/xiaoqiao_isBelongSNK_checkbox"
+                style="@style/optionStyle"
+                android:text="小乔" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/q3" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                style="@style/optionStyle">
+
+                <RadioButton
+                    android:id="@+id/rb1_rg2"
+                    style="@style/radio_button"
+                    android:text="@string/juzi" />
+
+                <RadioButton
+                    android:id="@+id/rb2_rg2"
+                    style="@style/radio_button"
+                    android:text="@string/chengyaojin" />
+
+                <RadioButton
+                    android:id="@+id/rb3_rg2"
+                    style="@style/radio_button"
+                    android:text="@string/nezha" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/q4" />
+
+            <EditText
+                android:id="@+id/mostExpensiveHero_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/q4_placeholder" />
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/advice" />
+
+            <EditText
+                android:id="@+id/advise_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/advice_placeholder" />
+
+            <Button
+                android:id="@+id/submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="三板斧" />
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="#FF5722"
+                android:onClick="submitTest"
+                android:text="@string/test_done"
+                android:textSize="16sp" />
+        </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/rb3_rg2"
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="24dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="莲藕" />
-        </RadioGroup>
+                android:text="@string/score" />
 
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="请写出农药最贵英雄的名称" />
+            <TextView
+                android:id="@+id/score_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-condensed"
+                android:text="0"
+                android:textSize="@dimen/scoreTextSize" />
 
-        <EditText
-            android:id="@+id/mostExpensiveHero_editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="提示,是一位女性哦~" />
-
-        <TextView
-            style="@style/HeaderTextStyle"
-            android:text="喜欢我的这个作品吗?有什么建议尽管提出来哈(选填)" />
-
-        <EditText
-            android:id="@+id/advise_editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="写下您的建议,这对我很重要." />
-        <Button
-            android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="完成测验"
-            android:textSize="16sp"
-            android:onClick="submitTest"
-            android:layout_gravity="right"
-            android:layout_marginRight="16dp"
-            android:background="#FF5722"/>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/result_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="24dp"
-        android:visibility="gone"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="您的分数为:"/>
-        <TextView
-            android:id="@+id/score_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="56sp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="0"
-            android:layout_gravity="center_horizontal"/>
-        <Button
-            android:id="@+id/reTest_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="再次测验"
-            android:layout_gravity="center_horizontal"
-            android:onClick="reTest"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/reTest_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="reTest"
+                android:text="@string/test_again" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

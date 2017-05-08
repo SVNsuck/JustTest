@@ -9,21 +9,26 @@
     </style>
     <style name="HeaderTextStyle" parent="AlertDialog.AppCompat.Light">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">@dimen/headerLayoutHeight</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/headerTextSize</item>
         <item name="android:background">#009688</item>
-        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingLeft">@dimen/headerPaddingLeft</item>
     </style>
     <style name="TitleTextStyle" parent="AlertDialog.AppCompat.Light">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_height">@dimen/titleLayoutHeight</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">@dimen/titleTextSize</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="optionStyle">
         <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="radio_button">
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>
